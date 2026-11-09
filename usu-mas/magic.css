@@ -42,20 +42,15 @@ h2::before {
   margin-right: 0.5em;
 }
 
-.clear {
-  clear: both;
-}
-
 nav {
   background-color: #ffffff;
   border: 1px solid #dce6f5;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
-  padding: 0.85em;
+  padding: 0.5em;
   margin-bottom: 1.5em;
   box-shadow: 0 4px 16px rgba(15, 36, 57, 0.06);
-
   position: sticky;
   top: 1em;
   z-index: 10;
@@ -100,16 +95,6 @@ nav a:focus {
   outline-offset: 2px;
 }
 
-.column-left {
-  float: left;
-  width: 48%;
-}
-
-.column-right {
-  float: right;
-  width: 48%;
-}
-
 footer {
   background-color: #0f2439;
   color: #e1eaf9;
@@ -127,6 +112,48 @@ footer {
   padding: 2em 0;
 }
 
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th,
+td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid #dce6f5;
+}
+
+thead th {
+  background-color: #0f2439;
+  color: #ffffff;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f7fd;
+}
+
+tbody th {
+  font-weight: normal;
+  color: #0f2439;
+}
+
+tfoot th,
+tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #0f2439;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  font-size: 0.85em;
+  color: #5a6878;
+  padding-bottom: 0.75em;
+}
+
 .card {
   background-color: #ffffff;
   border: 1px solid #dce6f5;
@@ -136,6 +163,34 @@ footer {
   box-shadow: 0 4px 16px rgba(15, 36, 57, 0.06);
   overflow: auto;
   position: relative;
+}
+
+.column-left {
+  float: left;
+  width: 48%;
+}
+
+.column-right {
+  float: right;
+  width: 48%;
+}
+
+.clear {
+  clear: both;
+}
+
+.badge {
+  position: absolute;
+  top: 1.25em;
+  right: 1.5em;
+  background-color: #4494da;
+  color: #ffffff;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4em 0.9em;
+  border-radius: 999px;
 }
 
 figure {
@@ -153,20 +208,6 @@ figure {
   float: left;
   width: 220px;
   margin: 0 1.75em 0.5em 0;
-}
-
-.badge {
-  position: absolute;
-  top: 1.25em;
-  right: 1.5em;
-  background-color: #4494da;
-  color: #ffffff;
-  font-size: 0.7em;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.4em 0.9em;
-  border-radius: 999px;
 }
 
 img.portrait {
@@ -188,4 +229,69 @@ figcaption {
   height: 72px;
   border-radius: 50%;
   border-style: none;
+}
+
+/* 
+Forms 
+*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.field label,
+legend {
+  font-weight: bold;
+  color: #0f2439;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font: inherit;
+  padding: 0.7em 0.9em;
+  border: 1px solid #b8c7dd;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #4494da;
+  outline-offset: 2px;
+}
+
+fieldset {
+  border: 1px solid #dce6f5;
+  border-radius: 8px;
+  padding: 1em 1.25em;
+  margin: 0;
+}
+
+fieldset label {
+  margin-right: 1.5em;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  background-color: #0f2439;
+  color: #ffffff;
+  padding: 0.8em 1.75em;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #4494da;
+}
+
+button:focus {
+  outline: 3px solid #4494da;
+  outline-offset: 2px;
 }
